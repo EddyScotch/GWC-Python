@@ -1,0 +1,235 @@
+import random
+
+def rockpaperscissors():
+    rps = ["Rock", "rock", "Paper", "paper", "scissors", "Scissors"]
+    win = [ ('Rock', 'Scissors'),  # who can be defeated by ROCK
+            ('Scissors', 'Paper'),  # who can be defeated by SCISSORS
+            ('Paper', 'Rock')]  # who can be defeated by PAPER
+
+    keepPlaying = True
+    while keepPlaying == True:
+        import random
+        userinput = input ("Rock, Paper, or Scissors?")
+        computer = random.choice (rps)
+        print ("I choose ", (computer))
+
+        if userinput in rps:
+            if userinput == computer:
+                print ("It's a tie!")
+                good2 = True
+                while good2 == True:
+                    understand = input ("Do you want to continue? Y/N")
+                    if understand == "Y" or understand == "y":
+                        keepPlaying = True
+                        good2 = False
+                    elif understand == "N" or understand == "n":
+                        keepPlaying = False
+                        good2 = False
+                    else:
+                        print ("I don't understand. Can you repeat your choice?")
+                        good2 = True
+
+            elif userinput == "rock" or userinput == "Rock":
+                if computer == "paper" or computer == "Paper":
+                    print ("You lose :( ")
+                    good4 = True
+                    while good4 == True:
+                        understand = input ("Do you want to continue? Y/N")
+                        if understand == "Y" or understand == "y":
+                            keepPlaying = True
+                            good4 = False
+                        elif understand == "N" or understand == "n":
+                            keepPlaying = False
+                            good4 = False
+                        else:
+                            print ("I don't understand. Can you repeat your choice?")
+                            good4 = True
+
+                if computer == "scissors" or computer == "Scissors":
+                    print ("You win! :) ")
+                    good3 = True
+                    while good3 == True:
+                        understand = input ("Do you want to continue? Y/N")
+                        if understand == "Y" or understand == "y":
+                            keepPlaying = True
+                            good3 = False
+                        elif understand == "N" or understand == "n":
+                            keepPlaying = False
+                            good3 = False
+                        else:
+                            print ("I don't understand. Can you repeat your choice?")
+                            good3 = True
+
+            elif userinput == "paper" or userinput == "Paper":
+                if computer == "Scissors" or computer == "scissors":
+                    print ("You lose :( ")
+                    good5 = True
+                    while good5 == True:
+                        understand = input ("Do you want to continue? Y/N")
+                        if understand == "Y" or understand == "y":
+                            keepPlaying = True
+                            good5 = False
+                        elif understand == "N" or understand == "n":
+                            keepPlaying = False
+                            good5 = False
+                        else:
+                            print ("I don't understand. Can you repeat your choice?")
+                            good5 = True
+
+                if computer == "Rock" or computer == "rock":
+                    print ("You win! :) ")
+                    good6 = True
+                    while good6 == True:
+                        understand = input ("Do you want to continue? Y/N")
+                        if understand == "Y" or understand == "y":
+                            keepPlaying = True
+                            good6 = False
+                        elif understand == "N" or understand == "y":
+                            keepPlaying = False
+                            good6 = False
+                        else:
+                            print ("I don't understand. Can you repeat your choice?")
+                            good6 = True
+
+            elif userinput == "scissors" or userinput == "Scissors":
+                if computer == "paper" or computer == "Paper":
+                    print ("You win! :) ")
+                    good7 = True
+                    while good7 == True:
+                        understand = input ("Do you want to continue? Y/N")
+                        if understand == "Y" or understand == "y":
+                            keepPlaying = True
+                            good7 = False
+                        elif understand == "N" or understand == "n":
+                            keepPlaying = False
+                            good7 = False
+                        else:
+                            print ("I don't understand. Can you repeat your choice?")
+                            good7 = True
+
+                if computer == "Rock" or computer == "rock":
+                    print ("You lose :( ")
+                    good8 = True
+                    while good8 == True:
+                        understand = input ("Do you want to continue? Y/N")
+                        if understand == "Y" or understand == "y":
+                            keepPlaying = True
+                            good8 = False
+                        elif understand == "N" or understand == "n":
+                            keepPlaying = False
+                            good8 = False
+                        else:
+                            print ("I don't understand. Can you repeat your choice?")
+                            good8 = True
+
+        else:
+            good = True
+            while good == True:
+                understand = input ("I don't understand. Do you want to continue? Y/N")
+                if understand == "Y":
+                    keepPlaying = True
+                    good = False
+                elif understand == "N":
+                    keepPlaying = False
+                    good = False
+                else:
+                    print ("I don't understand. Can you repeat your choice?")
+                    good = True
+rockpaperscissors()
+
+def madlib ():
+    noun1 = input ("Noun >> ")
+    place1 = input ("Place >> ")
+    adj1 = input ("Adjective >> ")
+    noun2 = input ("Noun >> ")
+    adv1 = input ("Adverb >> ")
+    verb1 = input ("Verb >> ")
+    adv2 = input ("Adverb >> ")
+    verb2 = input ("Verb >> ")
+    verb3 = input ("Verb >> ")
+    favstore = input ("Favorite Store >> ")
+    adv3 = input ("Adverb >> ")
+    verb4 = input ("Verb >> ")
+    favicecream = input ("Favorite icecream flavor >> ")
+
+    print ("You wake up on a/an", noun1, ' in the middle of ', place1, '. To your right is a/an ', adj1, noun2,)
+    print ("who is ", adv1, verb1, "towards you. You ", adv2, verb2, " away, but you are still being followed.")
+    print ("You decide to ", verb3, "when you see a/an", favstore, "having a special deal on icecream")
+    print ("You stop what you're doing and ", adv3, verb4, ' to find icecream. The ', noun2, ' is still ',)
+    print (verb1, ' at you, but its ok because you have your favorite flavor of icecream, ', favicecream, '.')
+madlib()
+
+def evenorodd():
+    computer_value = random.randint (1,10)
+    print ("{}".format(computer_value))
+    userinput = input("Is this number 'even' or 'odd'?")
+    if ((computer_value%2) == 0) and (userinput == "even"):
+        print ("YA DID IT! YOU SO SMORT \n")
+    elif ((computer_value%2) == 0) and (userinput == "odd"):
+        print ("You're wrong. \n")
+    elif ((computer_value%2) != 0) and (userinput == "even"):
+        print ("You're wrong. \n")
+    if ((computer_value%2) != 0) and (userinput == "odd"):
+        print ("YA DID IT! YOU SO SMORT \n")
+evenorodd()
+
+def hangman():
+    guessed_letters = []
+    good = []
+    bad = []
+    game_over = False
+
+    phrase = input("Type a phrase for someone to guess: ")
+    phrase = phrase.lower()
+
+    display = " "
+    for letter in phrase:
+        if letter in good:
+            display += letter
+        elif letter == " ":
+            display += "  "
+        # The letter has not been guessed yet
+        else:
+            display += "_ "
+
+    # Allow user to give input to computer
+    tries = 7
+    while tries > 0:
+        display = " "
+        for letter in phrase:
+            if letter in good:
+                display += letter
+            elif letter == " ":
+                display += "  "
+            # The letter has not been guessed yet
+            else:
+                display += "_ "
+        if tries == 0:
+            print ("You ran out of tries!")
+            print ("Play again!")
+            break
+        elif "_" not in display:
+            print ("Yay! You finished the phrase!: ")
+            print (display)
+            print ("Play again!")
+            break
+        print ("Incorrect")
+        print (bad)
+        print ("\n")
+        print (display)
+        guess = input ("Enter a letter: ")
+
+        if guess in guessed_letters or guess in bad or guess in good:
+            print ("Already guessed", guess)
+            guessed_letters.append (guess)
+        elif guess in phrase:
+            print ("You got a letter: {}".format (guess))
+            good.append (guess)
+        else:
+            print ("{} is not in the phrase".format (guess))
+            tries = tries - 1
+            bad.append (guess)
+
+        print (tries, "chances left")
+        print ("\n")
+hangman()
